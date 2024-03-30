@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card layout</title>
+</head>
+<style>
+    .cards{
+        display: flex;
+        flex-direction: row;
+        /* This should be set if we want to wrap in new line */
+        flex-wrap: wrap;
+    }
+    .card{
+        display: flex;
+        /* if width is in pixel it will automatically wrap in new line and width will be fixed it wont squeez when resizing,
+         if in % it wont wrap in new line rather will keep adjusting as we resize so we will have to change width for each breakpoint to change the card
+         layout for media query screen */
+        width:calc(33.33% - 4rem);
+        margin: 2rem;
+        background-color: yellow;
+    }
+    @media screen and (max-width: 900px){
+        .card{
+            width: 40%;
+        }
+    }
+    @media screen and (max-width: 620px){
+        .card{
+            width: 100%;
+        }
+    }
+   
+    
+</style>
+<body>
+
+    <div class="cards">
+       <div class="card">
+           <div>
+            <img/>
+            <div>
+                <h3>This is heading</h3>
+                <p>this is paragraph</p>
+            </div>
+            <button>find out more</button>
+
+           </div>
+       </div>
+       <div class="card">
+        <div>
+         <img/>
+         <div>
+             <h3>This is heading</h3>
+             <p>this is paragraph</p>
+         </div>
+         <button>find out more</button>
+
+        </div>
+        
+        </div>
+
+        <div class="card">
+            <div>
+             <img/>
+             <div>
+                 <h3>This is heading</h3>
+                 <p>this is paragraph</p>
+             </div>
+             <button>find out more</button>
+    
+            </div>
+            
+        </div>  
+
+        <div class="card">
+            <div>
+             <img/>
+             <div>
+                 <h3>This is heading</h3>
+                 <p>this is paragraph</p>
+             </div>
+             <button>find out more</button>
+    
+            </div>
+            
+        </div>  
+
+    </div>
+
+
+    
+</body>
+</html>
